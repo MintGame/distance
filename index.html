@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Дистанция</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-block">
+            <div class="search">
+                <input type="text" class="search-input" placeholder="Поиск">
+            </div>
+            <div class="navigation">
+                <div class="user">
+                    <img src="img/avatar.png" alt="avatar" class="user-avatar">
+                    <span class="username">Имя</span>
+                </div>
+                <nav class="navigation-panel">
+                    <a href="/" class="navigation-link">Главная</a>
+                    <a href="#" class="navigation-link">Создать</a>
+                </nav>
+                <div class="icons-panel">
+                    <a href="#" class="icon-link">
+                        <svg class="header-icon" width="20" height="20">
+                            <use xlink:href="img/icons.svg#frends"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <svg class="header-icon" width="22" height="22">
+                            <use xlink:href="img/icons.svg#chat"></use>
+                        </svg>  
+                    </a>
+                    <a href="#" class="icon-link">
+                        <svg class="header-icon" width="16" height="22">
+                            <use xlink:href="img/icons.svg#bell"></use>
+                        </svg> 
+                    </a>
+                    <a href="#" class="icon-link">
+                        <svg class="header-icon" width="22" height="22">
+                            <use xlink:href="img/icons.svg#info"></use>
+                        </svg>
+                        <svg class="header-drop" width="12" height="8">
+                            <use xlink:href="img/icons.svg#drop"></use>
+                        </svg>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="menu-sidebar">
+            <div class="user">
+                <img src="img/avatar.png" alt="avatar" class="user-avatar">
+                <span class="username">Имя Пользователя</span>
+            </div>
+            <nav class="nav-group">
+                <a href="#" class="nav-link active">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#news"></use>
+                    </svg>
+                    <span class="nav-text">Новости</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#messages"></use>
+                    </svg>
+                    <span class="nav-text">Сообщения</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#marketplace"></use>
+                    </svg>
+                    <span class="nav-text">Магазин</span>
+                </a>
+            </nav>
+
+            <nav class="nav-group">
+                <h3 class="nav-title">Быстрые ссылки</h3>
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#wins"></use>
+                    </svg>
+                    <span class="nav-text">Дизайн продукта</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#wins"></use>
+                    </svg>
+                    <span class="nav-text">UX & UI</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#wins"></use>
+                    </svg>
+                    <span class="nav-text">Figma</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#wins"></use>
+                    </svg>
+                    <span class="nav-text">Ant Дизайн</span>
+                </a>
+            </nav>
+
+            <nav class="nav-group">
+                <h3 class="nav-title">Прочее</h3>
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#flag"></use>
+                    </svg>
+                    <span class="nav-text">Страницы</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#headphones"></use>
+                    </svg>
+                    <span class="nav-text">Главная</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#home-icon"></use>
+                    </svg>
+                    <span class="nav-text">События</span>
+                </a>
+
+                <a href="#" class="nav-link">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/icons.svg#game"></use>
+                    </svg>
+                    <span class="nav-text">Игры</span>
+                </a>
+
+                <a onclick="hidner()" class="nav-link">
+                    <svg class="see-more-drop" width="12" height="8">
+                        <use xlink:href="img/icons.svg#drop"></use>
+                    </svg>
+                    <span class="nav-text sm-text">Еще…</span>
+                </a>
+
+                
+                <div id="HiddenBlock" class="see-more">
+                    <a href="#" class="more-link">Музыка</a>
+                    <a href="#" class="more-link">Видео</a>
+                    <a href="#" class="more-link">Закладки</a>
+                    <a href="#" class="more-link">О Дистанции</a>
+                </div>
+
+                <script>
+                    document.getElementById('HiddenBlock').style.display = "none"
+
+                    function hidner() {
+                    if (document.getElementById('HiddenBlock').style.display == "none")
+                    {document.getElementById('HiddenBlock').style.display = "flex"}
+                    else
+                    {document.getElementById('HiddenBlock').style.display = "none"}
+                    }
+
+                </script>
+                <!-- To hide the block below -->
+            </nav>
+        </div>
+        <!-- /.menu-sidebar -->
+
+        <div class="main-feed">
+            <div class="create-post">
+                <div class="create-post-header">
+                    <h4 class="create-post-title">Создать пост</h4>
+                </div>
+
+                <div class="create-post-body">
+                    <img src="img/avatar.png" alt="avatar" class="user-avatar">
+                    <div class="create-post-input" contenteditable="true">Как ваши дела, Имя?</div>
+                </div>
+
+                <div class="create-post-footer">
+                    <button class="tag">
+                        <svg width="24" height="24">
+                            <use xlink:href="img/icons.svg#picture"></use>
+                        </svg>
+                        <span class="button-text">Фото/Видео</span>
+                    </button>
+                    <button class="tag">
+                        <svg width="24" height="24">
+                            <use xlink:href="img/icons.svg#user-add"></use>
+                        </svg>
+                        <span class="button-text">Найти друзей</span>
+                    </button>
+                    <button class="tag">
+                        <svg width="24" height="24">
+                            <use xlink:href="img/icons.svg#smile"></use>
+                        </svg>
+                        <span class="button-text">Впечатления</span>
+                    </button>
+                    <button class="tag">
+                        <span class="button-text">•••</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- /.main-feed -->
+    </div>
+</body>
+</html>
