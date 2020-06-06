@@ -11,9 +11,9 @@
         <div class="header-block">
             <div class="search">
                 <button class="m-menu">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
+                    <span class="line">123</span>
+                    <span class="line">123</span>
+                    <span class="line">123</span>
                 </button>
 
                 <input type="text" class="search-input" placeholder="Поиск">
@@ -145,7 +145,7 @@
                     <span class="nav-text">Игры</span>
                 </a>
 
-                <a onclick="hidner()" class="nav-link">
+                <a class="nav-link other-link">
                     <svg class="see-more-drop" width="12" height="8">
                         <use xlink:href="img/icons.svg#drop"></use>
                     </svg>
@@ -153,24 +153,12 @@
                 </a>
 
                 
-                <div id="HiddenBlock" class="see-more">
+                <div class="see-more">
                     <a href="#" class="more-link">Музыка</a>
                     <a href="#" class="more-link">Видео</a>
                     <a href="#" class="more-link">Закладки</a>
                     <a href="#" class="more-link">О Дистанции</a>
                 </div>
-
-                <script>
-                    document.getElementById('HiddenBlock').style.display = "none"
-
-                    function hidner() {
-                    if (document.getElementById('HiddenBlock').style.display == "none")
-                    {document.getElementById('HiddenBlock').style.display = "flex"}
-                    else
-                    {document.getElementById('HiddenBlock').style.display = "none"}
-                    }
-
-                </script>
                 <!-- To hide the block below -->
             </nav>
         </div>

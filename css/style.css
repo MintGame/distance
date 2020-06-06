@@ -62,12 +62,17 @@ button {
     justify-content: space-around;
     margin-left: 6px;
     margin-right: 10px;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .m-menu .line {
     width: 100%;
     height: 1px;
     background-color: #fff;
+    
 }
 
 .search-input {
@@ -258,7 +263,7 @@ button {
 
 .see-more-drop {
     fill: #BFBFBF;
-    margin-left: 7px;
+    margin-left: 6px;
     margin-right: 4px;
 }
 
@@ -267,15 +272,18 @@ button {
 }
 
 .see-more {
-    display: flex;
+    display: none;
     flex-direction: column;
     border: 2px solid #1890FF;
     border-radius: 15px;
     background: #ffffff;
     margin-left: 8px;
     z-index: 125;
+    max-width: 210px;
+}
 
-    transition: 0.2s step-start;
+.see-more.active {
+    display: flex;
 }
 
 .more-link {
